@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %} Legal Documents {% endblock %}
+{% block head %}
+{{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/legaldocs.css') }}">
+{% endblock %}
+{% block nav %}
+    <nav>
+        <ul>
+            <li class="nonsub"><b><a class="nosub" href="{{ url_for('home') }}">LegalNavigator</a></b></li>
+            <li class="sub"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="sub"><a href="{{ url_for('about') }}">About Us</a></li>
+            <li class="sub"><a href="{{ url_for('logout') }}">logout</a></li>
+        </ul>
+    </nav>
+    {% endblock %}
+{% block body %}
+    <main>
+        <div class="title" style="text-align: center;">
+            <h1>
+                List Of Legal Documents
+            </h1>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h1>Case title</h1>
+                        <p class="subtitle">Case Context</p>
+                        <p><a href="{{ url_for('static',filename='PDFs/1.pdf') }}" target="_blank"><button>View Report</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h1>Case title</h1>
+                        <p class="subtitle">Case Context</p>
+                        <p><a href="{{ url_for('static',filename='PDFs/1.pdf') }}" target="_blank"><button>View Report</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h1>Case title</h1>
+                        <p class="subtitle">Case Context</p>
+                        <p><a href="{{ url_for('static',filename='PDFs/1.pdf') }}" target="_blank"><button>View Report</button></a></p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </main>
+    {% endblock %}
